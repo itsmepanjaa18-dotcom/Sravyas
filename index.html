@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sravya ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500;1,600&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#0c0a12;color:#fff;font-family:'DM Sans',sans-serif}
+body{overflow-x:hidden}
+.page{min-height:100vh;display:none;position:relative;padding:24px 22px 48px;overflow:hidden}
+.page.active{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.bg{position:absolute;inset:0;background:
+ radial-gradient(circle at 50% 20%,rgba(247,75,139,.22),transparent 30%),
+ radial-gradient(circle at 20% 80%,rgba(255,170,55,.11),transparent 25%),
+ linear-gradient(160deg,#100915,#17101b 55%,#0c0a12);z-index:-2}
+.glow{position:absolute;width:320px;height:320px;border-radius:50%;filter:blur(80px);background:#e84b8d;opacity:.12;top:25%;left:50%;transform:translateX(-50%);z-index:-1}
+.top{position:absolute;top:22px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center}
+.back{border:1px solid #ffffff22;background:#ffffff09;border-radius:40px;padding:13px 19px;color:#eee;font-size:15px}
+.logo{font-weight:800;font-size:22px}
+.dots{position:fixed;left:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:20}
+.dot{width:15px;height:15px;border-radius:50%;border:2px solid #8f536d;background:#17121b}
+.dot.on{background:#ff8ab3;box-shadow:0 0 16px #ff5d99;width:18px;height:18px;margin-left:-2px}
+.eyebrow{text-transform:uppercase;letter-spacing:5px;color:#ffd34f;font-weight:700;font-size:13px;text-align:center}
+h1{font-family:'Playfair Display',serif;font-size:64px;line-height:.95;margin:18px 0 20px;text-align:center;background:linear-gradient(90deg,#ff6b93,#ffc13e,#e76bdb);-webkit-background-clip:text;color:transparent}
+h2{font-size:30px;margin:10px 0 14px;text-align:center}
+.script{font-family:'Playfair Display',serif;font-style:italic;font-size:25px;color:#ddd;text-align:center}
+.btn{border:0;border-radius:40px;padding:16px 27px;font-size:18px;font-weight:700;color:#fff;background:linear-gradient(90deg,#f34e90,#ffb638,#d85ed9);box-shadow:0 10px 30px #ef4e8b33;cursor:pointer}
+.small{font-size:14px;color:#aaa;letter-spacing:3px;text-transform:uppercase}
+.card{width:min(92vw,560px);background:#0e0b13e8;border:1px solid #ffffff18;border-radius:30px;padding:28px;box-shadow:0 20px 60px #0008;backdrop-filter:blur(12px)}
+.card p{font-family:'Playfair Display',serif;font-style:italic;color:#ddd;font-size:19px;line-height:1.7;margin:14px 0}
+.timeline{width:min(92vw,620px);display:flex;gap:10px;flex-direction:column}
+.moment{background:#ffffff08;border:1px solid #ffffff18;border-radius:22px;padding:18px 20px}
+.moment b{color:#ff94b9}
+.count{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:min(92vw,440px);margin:20px 0 28px}
+.count div{padding:20px 10px;border:1px solid #ffffff22;border-radius:22px;background:#ffffff0c;text-align:center;font-size:34px}
+.count span{display:block;font-size:12px;color:#aaa;letter-spacing:3px;margin-top:7px}
+.gift{width:min(88vw,560px);height:310px;border-radius:22px;background:#35131f;border:1px solid #ff8ab444;position:relative;box-shadow:0 30px 80px #ff2c7b18}
+.ribbon-v,.ribbon-h{position:absolute;background:linear-gradient(90deg,#ed3270,#ff6aa1,#ed3270)}
+.ribbon-v{width:82px;height:100%;left:50%;transform:translateX(-50%)}
+.ribbon-h{height:74px;width:100%;top:50%;transform:translateY(-50%)}
+.bow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:125px;height:65px}
+.bow:before,.bow:after{content:"";position:absolute;top:0;width:65px;height:52px;background:#f34782;border-radius:70% 20% 70% 20%}
+.bow:before{left:0;transform:rotate(18deg)} .bow:after{right:0;transform:scaleX(-1) rotate(18deg)}
+.knot{position:absolute;left:50%;top:17px;transform:translateX(-50%);width:35px;height:31px;border-radius:7px;background:#ff4d8c;border:2px solid #ff9abf}
+.polaroids{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:min(94vw,620px);margin:20px 0}
+.photo{background:#f4f1ec;padding:10px 10px 28px;border-radius:4px;box-shadow:0 15px 30px #0008;transform:rotate(-2deg)}
+.photo:nth-child(2){transform:rotate(3deg)}
+.photo:nth-child(3){transform:rotate(2deg)}
+.photo:nth-child(4){transform:rotate(-3deg)}
+.photo img{display:block;width:100%;height:190px;object-fit:cover;background:#222}
+.photo div{height:10px}
+.song{height:250px;display:flex;align-items:center;justify-content:center;border:1px solid #ffffff1c;border-radius:24px;background:#ffffff06;margin-top:16px;color:#aaa}
+.footer{margin-top:20px;color:#999;font-size:13px;text-align:center}
+@media(max-width:480px){h1{font-size:58px}.gift{height:285px}.card{padding:24px}.photo img{height:145px}}
+
+/* Back button */
+.back-btn {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid #ffffff30;
+    background: #ffffff10;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.back-btn:hover {
+    background: #ffffff20;
+}
+
+</style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop preload="auto">
+  <source src="music/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+    
+
+<div class="dots" id="dots"></div>
+
+<section class="page active" id="p0">
+ <div class="bg"></div><div class="glow"></div>
+ <div class="gift"><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow"><div class="knot"></div></div></div>
+ <div class="small" style="margin-top:32px">TO</div>
+ <h2 style="font-family:'Playfair Display';font-style:italic;font-size:38px">Sravya</h2>
+ <div class="small">FROM <b style="color:#ddd">PANJAA</b></div>
+ <button class="btn" onclick="openGift()">Tap to open 🎁</button>
+</section>
+
+<section class="page" id="p1">
+ 
+ <button class="back-btn" onclick="go(0)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="eyebrow">Until Sravya's Birthday</div>
+ <h1>Sravya</h1>
+ <div class="count">
+  <div id="days">--<span>DAYS</span></div><div id="hours">--<span>HOURS</span></div>
+  <div id="mins">--<span>MIN</span></div><div id="secs">--<span>SEC</span></div>
+ </div>
+ <button class="btn" onclick="go(2)">Skip countdown →</button>
+</section>
+
+<section class="page" id="p2">
+ 
+ <button class="back-btn" onclick="go(1)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="eyebrow">Happy Birthday!</div>
+ <h1>Sravya</h1>
+ <div class="script">Turning 21! ✨</div>
+ <div class="script" style="margin-top:12px">"Rowdy"</div>
+ <button class="btn" style="margin-top:30px" onclick="go(3)">Continue →</button>
+</section>
+
+<section class="page letter-page" id="p3">
+
+    
+ <button class="back-btn" onclick="go(2)">← Back</button>
+<div class="letter-bg"></div>
+
+    <div class="card">
+        <h2>A little letter</h2>
+
+        <p>
+            Happy Birthday, Rowdy! 🎂 From all the crazy memories and
+            endless laughs to every random conversation, I’m truly grateful
+            to have you in my life. No matter how much time passes, our
+            friendship will always be special. Wishing you happiness,
+            success, and countless unforgettable moments ahead! ❤️
+        </p>
+    </div>
+
+    <button class="btn" style="margin-top:22px" onclick="go(4)">
+        Next →
+    </button>
+
+</section>
+
+<section class="page" id="p4">
+ 
+ <button class="back-btn" onclick="go(3)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="card">
+  <h2>♡ What I love most about you</h2>
+  <p>I love how you can make even the most boring moments fun. Your crazy sense of humor, your kindness, and the way you always stand by the people you care about are what make you such an amazing friend.
+  </div>
+ <button class="btn" style="margin-top:22px" onclick="go(5)">Our Story →</button>
+</section>
+
+<section class="page" id="p5">
+ 
+ <button class="back-btn" onclick="go(4)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="card">
+  <h2>📖 Our Story</h2>
+  <p>We started B.Tech as complete strangers, never imagining that one day we’d become this close. From barely knowing each other to sharing countless laughs, secrets, crazy moments, and unforgettable memories, our friendship happened so naturally. Looking back, I honestly can’t believe that two strangers from the beginning would end up becoming such close friends. I’m really grateful that B.Tech brought you into my life. Here’s to all the memories we’ve made and all the ones still to come! ❤️✨
+ </div>
+ <button class="btn" style="margin-top:22px" onclick="go(6)">Shared Dreams →</button>
+</section>
+
+<section class="page" id="p6">
+ 
+ <button class="back-btn" onclick="go(5)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="card">
+  <h2>✨ Dreams Together</h2>
+  <p>I dream of making many more crazy memories with you—random trips, late-night talks, endless jokes, good food, and moments we’ll laugh about years from now. Here’s to many more adventures together! 🥂✨ and, definitely, trying our best to get into the same company someday.
+ <button class="btn" style="margin-top:22px" onclick="go(7)">Our Memories →</button>
+</section>
+
+<section class="page" id="p7">
+ 
+ <button class="back-btn" onclick="go(6)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="eyebrow">📸 Our Memories</div>
+ <h2>Little moments, big memories</h2>
+ <div class="polaroids">
+  <div class="photo"><img src="memory1.jpg"><div></div></div>
+  <div class="photo"><img src="memory2.jpg"><div></div></div>
+  <div class="photo"><img src="memory3.jpg"><div></div></div>
+  <div class="photo"><img src="memory4.jpg"><div></div></div>
+ </div>
+ <button class="btn" onclick="go(8)">One last thing →</button>
+</section>
+
+<section class="page" id="p9">
+ 
+ <button class="back-btn" onclick="go(7)">← Back</button>
+<div class="bg"></div><div class="glow"></div>
+ <div class="eyebrow">A final wish</div>
+ <h1>Happy Birthday,<br>Rowdy ❤️</h1>
+ <div class="card" style="text-align:center">
+  <p>May this year bring you everything you've been hoping for — happiness, success, amazing memories and a lot of reasons to smile.</p>
+  <p style="font-style:normal;font-weight:700;color:#ff9abb">Always cheering for you — Panjaa ❤️</p>
+ </div>
+</section>
+
+<script>
+const total=9; let current=0;
+const dots=document.getElementById('dots');
+for(let i=0;i<total;i++){let d=document.createElement('div');d.className='dot';d.onclick=()=>go(i);dots.appendChild(d)}
+function openGift(){
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.5;
+  music.play().catch(err => console.log("Music playback blocked:", err));
+  go(1);
+}
+
+function go(n){current=n;document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('active',i===n));document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===n));window.scrollTo({top:0,behavior:'smooth'});confetti()}
+function confetti(){
+ for(let i=0;i<18;i++){let x=document.createElement('i');x.style.cssText=`position:fixed;z-index:30;left:${Math.random()*100}vw;top:-10px;width:7px;height:11px;background:hsl(${Math.random()*360},80%,70%);transform:rotate(${Math.random()*360}deg);transition:transform 1.8s linear,top 1.8s linear;`;document.body.appendChild(x);requestAnimationFrame(()=>{x.style.top='105vh';x.style.transform+=` translateX(${(Math.random()-.5)*180}px) rotate(720deg)`});setTimeout(()=>x.remove(),1900)}
+}
+const target=new Date('2026-09-05T00:00:00+05:30').getTime();
+function tick(){let diff=Math.max(0,target-Date.now());let s=Math.floor(diff/1000),d=Math.floor(s/86400);s%=86400;let h=Math.floor(s/3600);s%=3600;let m=Math.floor(s/60);s%=60;
+document.getElementById('days').innerHTML=d+'<span>DAYS</span>';document.getElementById('hours').innerHTML=String(h).padStart(2,'0')+'<span>HOURS</span>';document.getElementById('mins').innerHTML=String(m).padStart(2,'0')+'<span>MIN</span>';document.getElementById('secs').innerHTML=String(s).padStart(2,'0')+'<span>SEC</span>'}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>

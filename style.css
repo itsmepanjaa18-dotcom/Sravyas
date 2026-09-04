@@ -1,0 +1,99 @@
+/* ============================= */
+/* BACKGROUND IMAGES - SLIDES 4-7 */
+/* ============================= */
+
+#p4,
+#p5,
+#p6,
+#p7 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ============================= */
+/* SLIDE 4                       */
+/* ============================= */
+
+#p4::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/bg4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.35;
+
+    z-index: 0;
+}
+
+/* ============================= */
+/* SLIDE 5                       */
+/* ============================= */
+
+#p5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/bg5.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.35;
+
+    z-index: 0;
+}
+
+/* ============================= */
+/* SLIDE 6                       */
+/* ============================= */
+
+#p6::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/bg6.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.35;
+
+    z-index: 0;
+}
+
+/* ============================= */
+/* SLIDE 7                       */
+/* ============================= */
+
+#p7::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/bg7.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.35;
+
+    z-index: 0;
+}
+
+/* ============================= */
+/* KEEP CONTENT ABOVE IMAGE      */
+/* ============================= */
+
+#p4 > *,
+#p5 > *,
+#p6 > *,
+#p7 > * {
+    position: relative;
+    z-index: 2;
+}
